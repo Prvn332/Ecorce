@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Noto Serif", serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Inter", sans-serif;
+
+  --color-primary: #004185;
+  --color-secondary: #f59e0b;
+  --color-on-primary: #ffffff;
+  --color-on-secondary: #ffffff;
+  --color-background: #fef9f1;
+  --color-surface: #fef9f1;
+  --color-surface-container: #f2ede5;
+  --color-surface-container-low: #f8f3eb;
+  --color-surface-container-high: #ece8e0;
+  --color-surface-container-highest: #e7e2da;
+  --color-on-surface: #001a40;
+  --color-on-surface-variant: #56433a;
+  --color-outline-variant: #dcc1b5;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-surface text-on-surface font-body;
+  }
+}
+
+.glass-nav {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(0, 65, 133, 0.4) 0%, rgba(245, 158, 11, 0.4) 100%);
+}
+
+.cta-gradient {
+  background: linear-gradient(to right, #f59e0b, #fbbf24);
+}
